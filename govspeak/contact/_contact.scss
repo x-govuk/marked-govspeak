@@ -1,0 +1,10 @@
+.govspeak-address,
+.govspeak-contact {
+  @include govuk-text-colour;
+  @include govuk-font($size: 19);
+  @include govuk-responsive-margin(4, "bottom");
+  border-left: 1px solid $govuk-border-colour;
+  font-style: normal;
+  margin-top: 0;
+  padding-left: govuk-spacing(3);
+}

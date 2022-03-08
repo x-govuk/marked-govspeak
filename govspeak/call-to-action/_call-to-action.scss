@@ -1,0 +1,14 @@
+.govspeak-call-to-action {
+  @include govuk-responsive-margin(4, "bottom");
+  @include govuk-responsive-margin(4, "top");
+  background-color: govuk-colour("light-grey");
+  padding: govuk-spacing(6);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.govspeak-steps {
+  @extend %govuk-list;
+
+  > li {
+    margin-left: 0;
+    padding: govuk-spacing(3) 0 govuk-spacing(3) 45px;
+
+    @for $i from 1 through 30 {
+      &:nth-child(#{$i}) {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle r='50%25' cx='50%25' cy='50%25'%3E%3C/circle%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='0.33em' font-family='#{$govuk-font-family-gds-transport}' fill='%23FFF'%3E#{$i}%3C/text%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 0 .75em;
+        background-size: 1.5em;
+      }
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
