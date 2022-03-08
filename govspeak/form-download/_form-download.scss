@@ -1,0 +1,17 @@
+.govspeak-form-download {
+  padding: govuk-spacing(1) 0;
+
+  @include govuk-media-query($until: "tablet") {
+    margin: govuk-spacing(3) 0 govuk-spacing(4);
+  }
+
+  a {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 35 35'%3E%3Cpath fill='%23FFF' d='M3 0h25v33H3z'/%3E%3Cpath fill='%230B0C0C' d='M5 2h21v29H5z'/%3E%3Cpath fill='%230B0C0C' fill-rule='nonzero' d='M28 4h2v31H8v-2h20z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    display: block;
+    font-weight: bold;
+    min-height: 2.5em;
+    padding: 0 0 0 govuk-spacing(8);
+  }
+}

@@ -1,0 +1,16 @@
+.govspeak-stat-headline {
+  @include govuk-responsive-margin(4, "bottom");
+  @include govuk-responsive-margin(4, "top");
+
+  p {
+    @include govuk-font($size: 19, $weight: bold);
+    margin: 0;
+  }
+
+  em {
+    @include govuk-font($size: 80, $weight: bold);
+    display: block;
+    font-style: normal;
+    margin: 3px 0 govuk-spacing(-1);
+  }
+}

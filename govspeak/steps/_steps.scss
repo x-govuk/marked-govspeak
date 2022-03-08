@@ -1,0 +1,38 @@
+.govspeak-steps {
+  @extend %govuk-list;
+
+  > li {
+    list-style-type: none;
+    margin-left: 0;
+    padding: .75em 0 .75em 2.5em;
+    position: relative;
+
+    // IE doesn't render this correctly with this element as display:block
+    // (it leaves a space for the :before pseudo element) by setting to
+    // display inline block and a width of 100% it works correctly.
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:before {
+      background-color: govuk-colour("black");
+      border-radius: 50%;
+      color: govuk-colour("white");
+      float: left;
+      font-size: 80%;
+      height: 1.75em;
+      left: .3em;
+      line-height: 1.75em;
+      position: absolute;
+      text-align: center;
+      top: .9em;
+      width: 1.75em;
+    }
+
+    @for $i from 1 through 30 {
+      &:nth-child(#{$i}):before {
+        content: "#{$i}";
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.govspeak-example,
+.govspeak-information,
+.govspeak-information-callout {
+  @include govuk-font($size: 19);
+  @include govuk-text-colour;
+  @include govuk-responsive-margin(6, "top");
+  @include govuk-responsive-margin(6, "bottom");
+  border-left: $govuk-border-width-wide solid $govuk-border-colour;
+  padding: govuk-spacing(3);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :only-child,
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
