@@ -32,7 +32,13 @@ test('Renders call to action', t => {
 </div>`)
 })
 
-test.todo('Renders example')
+test('Renders example', t => {
+  const result =  marked('$E\nExample\n$E')
+  t.is(result, `<div class="govspeak-example">
+  <p>Example</p>
+
+</div>`)
+})
 
 test.todo('Renders form download')
 
