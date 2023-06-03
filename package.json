@@ -1,6 +1,6 @@
 {
   "name": "@x-govuk/marked-govspeak",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Govspeak Markdown extensions for Marked.",
   "keywords": [
     "govuk",
