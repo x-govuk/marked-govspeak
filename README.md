@@ -17,16 +17,16 @@ npm install @x-govuk/marked-govspeak
 Import `govspeak` and and add these extensions to marked with `marked.use()`:
 
 ```js
-import { marked } from 'marked'
-import govspeak from '@x-govuk/marked-govspeak'
+import { marked } from "marked";
+import govspeak from "@x-govuk/marked-govspeak";
 
-marked.use({ extensions: govspeak })
+marked.use({ extensions: govspeak });
 ```
 
 When you call `marked`, the generated HTML will include the classes to style the Govspeak Markdown extensions. For example:
 
 ```js
-marked('%This is a warning callout%')
+marked("%This is a warning callout%");
 ```
 
 will output:
@@ -47,14 +47,35 @@ To enable the styling you will need to add the following to your Sass file:
 
 Unlike [the Govspeak gem](https://github.com/alphagov/govspeak), this package is not used to publish any part of GOV.UK. For that reason, it doesn’t support the following extensions:
 
-* bar charts
-* cross domain tracking on buttons
-* embedded content and attachment links
-* tables that use Kramdown syntax
+- bar charts
+- cross domain tracking on buttons
+- embedded content and attachment links
+- tables that use Kramdown syntax
 
 This package also provides its own set of CSS styles, based on [those used by GOV.UK Publishing Components](https://github.com/alphagov/govuk_publishing_components/tree/main/app/assets/stylesheets/govuk_publishing_components/components/govspeak).
 
 The class names used also differ, each prefixed with `govspeak-`. Therefore a `govspeak` or `gem-c-govspeak` class is not needed on any parent container.
+
+### Using original Govspeak gem classes
+
+If you wish to generate class names that match those from the Govspeak Ruby gem, you can pass the `govspeakGemCompatibility` option to marked. For example:
+
+```js
+marked.setOptions({ govspeakGemCompatibility: true });
+
+marked("%This is a warning callout%");
+```
+
+will output:
+
+```html
+<div class="application-notice help-notice" role="note" aria-label="Warning">
+  <p>This is a warning callout</p>
+</div>
+```
+
+> [!NOTE]\
+> You will need to provide your own styles if you use this option.
 
 ## Supported extensions
 
@@ -72,8 +93,8 @@ $A
 <div class="govspeak-address">
   <div class="adr org fn">
     <p>
-      HM Revenue and Customs<br>
-      Bradford<br>
+      HM Revenue and Customs<br />
+      Bradford<br />
       BD98 1YY
     </p>
   </div>
@@ -105,9 +126,23 @@ To turn a button into a [‘Start now’ button](https://design-system.service.g
 ```
 
 ```html
-<a class="govuk-button govuk-button--start" href="https://gov.uk/random" role="button">
+<a
+  class="govuk-button govuk-button--start"
+  href="https://gov.uk/random"
+  role="button"
+>
   Start Now
-  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false"><path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path></svg>
+  <svg
+    class="govuk-button__start-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="17.5"
+    height="19"
+    viewBox="0 0 33 40"
+    role="presentation"
+    focusable="false"
+  >
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+  </svg>
 </a>
 ```
 
@@ -180,11 +215,13 @@ $C
 
 ```html
 <div class="govspeak-contact">
-  <p>Financial Conduct Authority<br>
-    <a href="mailto:consumer.queries@fca.org.uk">consumer.queries@fca.org.uk</a><br>
-    Telephone: 0800 111 6768<br>
-    Monday to Friday, 8am to 6pm<br>
-    Saturday, 9am to 1pm<br>
+  <p>
+    Financial Conduct Authority<br />
+    <a href="mailto:consumer.queries@fca.org.uk">consumer.queries@fca.org.uk</a
+    ><br />
+    Telephone: 0800 111 6768<br />
+    Monday to Friday, 8am to 6pm<br />
+    Saturday, 9am to 1pm<br />
     <a href="/call-charges">Find out about call charges</a>
   </p>
 </div>
@@ -200,7 +237,11 @@ $D
 
 ```html
 <div class="govspeak-form-download">
-  <p><a href="/example.pdf">Download ‘Jobcentre Plus form for employment’ (PDF, 43KB)</a></p>
+  <p>
+    <a href="/example.pdf"
+      >Download ‘Jobcentre Plus form for employment’ (PDF, 43KB)</a
+    >
+  </p>
 </div>
 ```
 
@@ -236,7 +277,7 @@ $I
 
 ```md
 {stat-headline}
-*13.8bn* years since the big bang
+_13.8bn_ years since the big bang
 {/stat-headline}
 ```
 
