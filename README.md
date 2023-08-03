@@ -56,6 +56,27 @@ This package also provides its own set of CSS styles, based on [those used by GO
 
 The class names used also differ, each prefixed with `govspeak-`. Therefore a `govspeak` or `gem-c-govspeak` class is not needed on any parent container.
 
+However, if you wish to generate class names that match those from the Govspeak
+ruby gem then you can pass the `govspeakGemCompatibility` option to marked.  For
+example:
+
+```
+marked.setOptions({ govspeakGemCompatibility: true })
+
+marked('%This is a warning callout%')
+```
+
+will output:
+
+```html
+<div class="application-notice help-notice" role="note" aria-label="Warning">
+  <p>This is a warning callout</p>
+</div>
+```
+
+**Note: If you use this option, you will need to provide the styles.  This package does
+not contain the CSS styles for these classes**
+
 ## Supported extensions
 
 ### Address
