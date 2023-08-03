@@ -11,6 +11,6 @@
   }
 
   @include govuk-media-query($until: tablet) {
-    margin: .75em 0;
+    margin: 0.75em 0;
   }
 }
