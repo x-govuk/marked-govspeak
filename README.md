@@ -302,3 +302,12 @@ s3. Love numbers.
   <li>Love numbers.</li>
 </ol>
 ```
+
+## Releasing a new version
+
+`npm run release`
+
+This command will ask you what version you want to use. It will then publish a new version on NPM, create and push a new git tag and then generate release notes ready for posting on GitHub.
+
+> [!NOTE]
+> Releasing a new version requires permission to publish packages to the `@x-govuk` organisation.
