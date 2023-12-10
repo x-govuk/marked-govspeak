@@ -15,16 +15,16 @@ npm install @x-govuk/marked-govspeak
 ## Usage
 
 ```js
-import { marked } from "marked";
-import govspeak from "@x-govuk/marked-govspeak";
+import { marked } from 'marked'
+import govspeak from '@x-govuk/marked-govspeak'
 
-marked.use(govspeak());
+marked.use(govspeak())
 ```
 
 When you call `marked`, the generated HTML will include the classes to style the Govspeak Markdown extensions. For example:
 
 ```js
-marked("%This is a warning callout%");
+marked('%This is a warning callout%')
 ```
 
 will output:
@@ -59,14 +59,14 @@ The class names used also differ, each prefixed with `govspeak-`. Therefore a `g
 If you wish to generate class names that match those from the Govspeak Ruby gem, you can pass the `govspeakGemCompatibility` option to marked. For example:
 
 ```js
-import { marked } from "marked";
-import govspeak from "@x-govuk/marked-govspeak";
+import { marked } from 'marked'
+import govspeak from '@x-govuk/marked-govspeak'
 
 marked.use(govspeak({
   govspeakGemCompatibility: true
-}));
+}))
 
-marked("%This is a warning callout%");
+marked('%This is a warning callout%')
 ```
 
 will output:
