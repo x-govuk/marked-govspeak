@@ -44,7 +44,7 @@
     "stylelint-config-gds": "^1.0.0"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18"
   },
   "c8": {
     "reporter": [
