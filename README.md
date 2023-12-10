@@ -4,7 +4,7 @@
 
 ## Requirements
 
-Node.js v16 or later.
+Node.js v18 or later.
 
 ## Installation
 
