@@ -4,8 +4,9 @@ const { marked } = require('marked')
 const govspeak = require('../index.js')
 
 describe('Govspeak with RubyGem compatibility', () => {
-  marked.setOptions({ govspeakGemCompatibility: true })
-  marked.use({ extensions: govspeak })
+  marked.use(govspeak({
+    govspeakGemCompatibility: true
+  }))
 
   it('Renders address', () => {
     assert.equal(

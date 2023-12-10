@@ -4,7 +4,7 @@ const { marked } = require('marked')
 const govspeak = require('../index.js')
 
 describe('Govspeak', () => {
-  marked.use({ extensions: govspeak })
+  marked.use(govspeak())
 
   it('Renders address', () => {
     assert.equal(
