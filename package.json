@@ -25,9 +25,8 @@
   },
   "scripts": {
     "lint": "prettier . --check && standard && stylelint 'govspeak/**/*.scss'",
-    "test": "ava",
-    "test:watch": "ava --watch",
-    "coverage": "c8 ava"
+    "test": "node --test",
+    "coverage": "node --test --experimental-test-coverage"
   },
   "publishConfig": {
     "access": "public"
@@ -36,8 +35,6 @@
     "marked": "^4.3.0"
   },
   "devDependencies": {
-    "ava": "^5.0.0",
-    "c8": "^8.0.0",
     "prettier": "^3.0.1",
     "standard": "^17.0.0",
     "stylelint": "^15.0.0",
@@ -45,12 +42,6 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "c8": {
-    "reporter": [
-      "text",
-      "lcovonly"
-    ]
   },
   "prettier": {
     "semi": false,
