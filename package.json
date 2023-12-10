@@ -26,7 +26,8 @@
   "scripts": {
     "lint": "prettier . --check && standard && stylelint 'govspeak/**/*.scss'",
     "test": "node --test",
-    "coverage": "node --test --experimental-test-coverage"
+    "coverage": "node --test --experimental-test-coverage",
+    "release": "np"
   },
   "publishConfig": {
     "access": "public"
@@ -35,6 +36,7 @@
     "marked": "^4.3.0"
   },
   "devDependencies": {
+    "np": "^9.2.0",
     "prettier": "^3.0.1",
     "standard": "^17.0.0",
     "stylelint": "^15.0.0",
