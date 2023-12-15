@@ -51,7 +51,8 @@ describe('Govspeak', () => {
   it('Renders example', () => {
     assert.equal(
       marked('$E\nExample\n$E'),
-      '<div class="govspeak-example">\n  <p>Example</p>\n\n</div>')
+      '<div class="govspeak-example">\n  <p>Example</p>\n\n</div>'
+    )
   })
 
   it('Renders information callout', () => {
@@ -77,7 +78,9 @@ describe('Govspeak', () => {
 
   it('Renders stat headline', () => {
     assert.equal(
-      marked('{stat-headline}\n*13.8bn* years since the big bang{/stat-headline}'),
+      marked(
+        '{stat-headline}\n*13.8bn* years since the big bang{/stat-headline}'
+      ),
       '<div class="govspeak-stat-headline">\n  <p><em>13.8bn</em> years since the big bang</p>\n\n</div>'
     )
   })
@@ -92,6 +95,7 @@ describe('Govspeak', () => {
   it('Renders warning callout', () => {
     assert.equal(
       marked('%warning%'),
-      '<div class="govspeak-warning-callout" role="note" aria-label="Warning">\n  <p>warning</p>\n</div>')
+      '<div class="govspeak-warning-callout" role="note" aria-label="Warning">\n  <p>warning</p>\n</div>'
+    )
   })
 })

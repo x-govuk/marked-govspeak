@@ -4,9 +4,11 @@ const { marked } = require('marked')
 const govspeak = require('../index.js')
 
 describe('Govspeak with RubyGem compatibility', () => {
-  marked.use(govspeak({
-    govspeakGemCompatibility: true
-  }))
+  marked.use(
+    govspeak({
+      govspeakGemCompatibility: true
+    })
+  )
 
   it('Renders address', () => {
     assert.equal(
@@ -32,7 +34,8 @@ describe('Govspeak with RubyGem compatibility', () => {
   it('Renders call to action', () => {
     assert.equal(
       marked('$CTA\nCall to action\n$CTA'),
-      '<div class="call-to-action">\n  <p>Call to action</p>\n\n</div>')
+      '<div class="call-to-action">\n  <p>Call to action</p>\n\n</div>'
+    )
   })
 
   it('Renders contact', () => {
@@ -79,7 +82,9 @@ describe('Govspeak with RubyGem compatibility', () => {
 
   it('Renders stat headline', () => {
     assert.equal(
-      marked('{stat-headline}\n*13.8bn* years since the big bang{/stat-headline}'),
+      marked(
+        '{stat-headline}\n*13.8bn* years since the big bang{/stat-headline}'
+      ),
       '<div class="stat-headline">\n  <p><em>13.8bn</em> years since the big bang</p>\n\n</div>'
     )
   })
