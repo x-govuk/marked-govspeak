@@ -1,6 +1,8 @@
-const assert = require('assert/strict')
+const assert = require('node:assert/strict')
 const { describe, it } = require('node:test')
+
 const { marked } = require('marked')
+
 const govspeak = require('../index.js')
 
 describe('Govspeak with RubyGem compatibility', () => {

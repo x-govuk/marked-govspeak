@@ -1,6 +1,7 @@
 /**
- * Render Govspeak markup.
- * @param {object} [options] Options for the extension
+ * Render Govspeak markup
+ *
+ * @param {object} [options] - Options for the extension
  * @returns {object} A MarkedExtension to be passed to `marked.use()`
  */
 module.exports = function (options = {}) {
