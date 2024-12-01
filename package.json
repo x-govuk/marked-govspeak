@@ -40,7 +40,7 @@
     "access": "public"
   },
   "dependencies": {
-    "marked": "^11.0.0"
+    "marked": "^15.0.3"
   },
   "devDependencies": {
     "@x-govuk/eslint-config": "^0.0.1",
